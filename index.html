@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  body {
+    background-image: url(./Assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  /* ======= HEADER ====== */
+  .logo {
+    display: flex;
+    align-items: center;
+
+    color: #594b46;
+
+    margin: 20px 0px 10px 10px ;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    height: 60px;
+
+    background-color: #e7931a;
+  }
+
+  .menu2 {
+    display: flex;
+    width: fit-content;
+    margin-left: 60px;
+  }
+
+  .menu2 a {
+    display: flex;
+    align-items: center;
+    padding-inline: 30px;
+
+    color: white;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 700;
+
+    transition: 0.4s;
+  }
+
+  .banner {
+    display: flex;
+  }
+
+  .banner img {
+    width: 100%;
+  }
+
+  .information {
+    background-color: #e7931a;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 0;
+  }
+
+  /* ======= ANIMATIONS ======= */
+  .menu2 a:hover {
+    background-color: #be1e2d;
+  }
+
+</style>
+<body>
+  <header>
+    <div class="logo"><img src="./Assets/logo2.png" alt=""> <h1>Catalone's <br> Bakery</h1></div>
+    <div class="menu"><div class="menu2">
+      <a href="">INÍCIO</a>
+      <a href="">SOBRE NÓS</a>
+      <a href="">PRODUTOS</a>
+      <a href="">CONTATO</a>
+    </div></div>
+    <div class="banner"><img src="./Assets/banner.jpg" alt=""></div>
+    <div class="information">
+      <marquee scrollamount="5" behavior="scroll" direction="left">
+        Segunda à Sábado de 6h as 20h. <br> 
+        Domingos e feriados de 6h as 14h. <br>
+        Tel: 21 4002-8922</marquee>
+    </div>
+
+  </header>
+  <main>
+    
+  </main>
+
+  <footer></footer>
+</body>
+</html>

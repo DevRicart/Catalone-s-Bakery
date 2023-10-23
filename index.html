@@ -24,7 +24,6 @@
       background-image: url(./Assets/background1.jpg);
       background-repeat: no-repeat;
       background-size: 100%;
-      height: 3000px;
     }
     /* ======= HEADER ====== */
     .logo {
@@ -193,11 +192,72 @@
       margin-top: 10px;
     }
 
+    .contatos {
+      display: flex;
+      gap: 40px;
+      margin: auto;
+      margin-top: 30px;
+    }
+
+    .contatos div {
+      width: 200px;
+    }
+
+    .contatos .icon-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .contatos .icon-title img {
+      margin-right: 10px;
+    }
+
+    .icon-title {
+      display: flex;
+    }
+
+    .social {
+      margin-top: 50px;
+      display: flex;
+      gap: 80px;
+    }
+
+    .social img {
+      width: 110px;
+      transition: 0.4s;
+    }
+
+    .social img:hover {
+      scale: 1.1;
+    }
+
     hr {
       width: 100px;
       border-bottom: 2px solid black;
       border-top: none;
       margin: 20px auto 60px auto;
+    }
+
+    /* ======= FOOTER ======= */
+
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      margin-top: 60px;
+      margin-bottom: 30px;
+    }
+
+    footer span {
+      color: black;
+      transition: 0.4s;
+    }
+
+    footer span:hover {
+      color: white;
     }
 
     /* ======= ANIMATIONS ======= */
@@ -263,7 +323,6 @@
     }
 
     .card-content {
-      border: 1px solid black;
       border-radius: 10px;
       width: fit-content;
 
@@ -519,15 +578,65 @@
               <input type="button" value="Enviar mensagem" />
             </div>
           </form>
+          <div class="contatos">
+            <div>
+              <div class="icon-title">
+                <img
+                  width="30px"
+                  src="./Assets/Icons/location.png"
+                  alt="ícone local"
+                />
+                <h3>Endereço</h3>
+              </div>
+              <p>Rua João 01, 101 - Rio de Janeiro RJ</p>
+            </div>
+            <div>
+              <div class="icon-title">
+                <img
+                  width="30px"
+                  src="./Assets/Icons/phone-call.png"
+                  alt="ícone telefones"
+                />
+                <h3>Telefones</h3>
+              </div>
+              <p>
+                Telefone: 21 4002-8922 <br />
+                Celular: 21 96666-9999
+              </p>
+            </div>
+            <div>
+              <div class="icon-title">
+                <img
+                  width="30px"
+                  src="./Assets/Icons/mail.png"
+                  alt="ícone email"
+                />
+                <h3>E-mail</h3>
+              </div>
+              <p>emailpadaria@mail.com</p>
+            </div>
+          </div>
+          <div class="social">
+            <a href=""><img src="./Assets/Icons/whatsapp.png" alt="" /></a>
+            <a href=""><img src="./Assets/Icons/facebook.png" alt="" /></a>
+            <a href=""><img src="./Assets/Icons/instagram.png" alt="" /></a>
+          </div>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <p>
+        Desenvolvido por <a href=""><span>Ricardo Gonçalves</span></a> no Curso
+        de Programador Front-End com o
+        <a href=""><span>Prof. Anthony Freitas</span></a
+        >.
+      </p>
+      <p>Todos os direitos reservados - Senai Maracanã - 2023©</p>
+    </footer>
   </body>
 </html>
-<!-- 
-  -Colocar endereço, telefone e e-mail na parte de contato
-  -Fazer o rodapé do zero
+<!--  
   -Colocar uma mensagem em fade-in na frente do banner
   -Mexer nas fontes, tamanhos e cores
+  -Mudar preço dos produtos
 -->

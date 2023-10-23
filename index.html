@@ -93,8 +93,8 @@
       margin-bottom: 70px;
     }
     #sobre h2,
-    #produtos h2 {
-      margin-bottom: 46px;
+    #produtos h2,
+    #contato h2 {
       font-size: 36px;
     }
 
@@ -115,6 +115,7 @@
     #produtos {
       display: flex;
       justify-content: center;
+      margin-bottom: 70px;
     }
 
     .sessao-produtos {
@@ -129,8 +130,82 @@
       margin-bottom: 20px;
     }
 
+    #contato {
+      display: flex;
+      justify-content: center;
+    }
+
+    .contato {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 1000px;
+    }
+
+    input {
+      height: 40px;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+      padding: 20px;
+      outline: none;
+    }
+
+    .nome {
+      width: 500px;
+    }
+
+    .email {
+      margin-top: 5px;
+      width: 248px;
+    }
+
+    .telefone {
+      width: 248px;
+    }
+
+    textarea {
+      margin-top: 5px;
+      resize: none;
+      width: 500px;
+      height: 300px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      padding: 5px 15px;
+      outline: none;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn input {
+      padding: 15px 30px;
+      height: fit-content;
+      border-radius: 10px;
+      cursor: pointer;
+      color: white;
+      background-color: #e7931a;
+      transition: 0.4s;
+      border: none;
+      margin-top: 10px;
+    }
+
+    hr {
+      width: 100px;
+      border-bottom: 2px solid black;
+      border-top: none;
+      margin: 20px auto 60px auto;
+    }
+
     /* ======= ANIMATIONS ======= */
     .menu2 a:hover {
+      background-color: #be1e2d;
+    }
+
+    .btn input:hover {
       background-color: #be1e2d;
     }
 
@@ -216,7 +291,7 @@
           <a href="">INÍCIO</a>
           <a href="#sobre">SOBRE NÓS</a>
           <a href="#produtos">PRODUTOS</a>
-          <a href="">CONTATO</a>
+          <a href="#contato">CONTATO</a>
         </div>
       </div>
       <div class="banner"><img src="./Assets/banner.jpg" alt="" /></div>
@@ -231,6 +306,7 @@
     <main>
       <section id="sobre">
         <h2>Sobre nós</h2>
+        <hr />
         <div class="sobre">
           <img src="./Assets/sobre.jpg" alt="" />
           <div>
@@ -255,7 +331,11 @@
       </section>
       <section id="produtos">
         <div class="sessao-produtos">
-          <h2>Nossos produtos</h2>
+          <div>
+            <h2>Nossos produtos</h2>
+            <hr />
+          </div>
+
           <div class="cards">
             <div class="produtos">
               <div class="flip-card">
@@ -411,9 +491,43 @@
           </div>
         </div>
       </section>
-      <section id="contato"></section>
+      <section id="contato">
+        <div class="contato">
+          <h2>Nos contate</h2>
+          <hr />
+          <form action="">
+            <div><input class="nome" type="text" placeholder="Seu nome" /></div>
+            <div class="dados">
+              <input class="email" type="text" placeholder="Seu e-mail" />
+              <input
+                class="telefone"
+                type="text"
+                inputmode="numeric"
+                placeholder="Seu telefone"
+              />
+            </div>
+            <div>
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Escreva sua mensagem aqui..."
+              ></textarea>
+            </div>
+            <div class="btn">
+              <input type="button" value="Enviar mensagem" />
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
-
     <footer></footer>
   </body>
 </html>
+<!-- 
+  -Colocar endereço, telefone e e-mail na parte de contato
+  -Fazer o rodapé do zero
+  -Colocar uma mensagem em fade-in na frente do banner
+  -Mexer nas fontes, tamanhos e cores
+-->

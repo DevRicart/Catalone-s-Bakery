@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Catalone's</title>
+    <link rel="icon" href="./Assets/pao.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,9 +22,15 @@
     }
 
     body {
+      /*
       background-image: url(./Assets/background1.jpg);
       background-repeat: no-repeat;
-      background-size: 100%;
+      background-size: 100%; */
+      /* Optei por usar uma cor sólida, já que ficava estéticamente mais bonito, 
+      mas mantive o código da imagem como fundo do site apenas comentado */
+      background-color: #eadbc2;
+
+      z-index: -1;
     }
     /* ======= HEADER ====== */
     .logo {
@@ -36,6 +43,7 @@
     }
 
     .logo img {
+      margin-right: 15px;
       width: 100px;
     }
 
@@ -70,6 +78,16 @@
       display: flex;
     }
 
+    .banner p {
+      position: absolute;
+      margin-top: 70px;
+      margin-left: 50px;
+      color: white;
+      font-size: 72px;
+      font-weight: 700;
+      max-width: 990px;
+    }
+
     .banner img {
       width: 100%;
     }
@@ -95,10 +113,18 @@
     #produtos h2,
     #contato h2 {
       font-size: 36px;
+      color: #473816;
     }
 
     #sobre h3 {
       margin-bottom: 25px;
+      font-size: 24px;
+      color: #473816;
+      transition: 0.4s;
+    }
+
+    #sobre p {
+      color: #594b46;
     }
 
     .sobre {
@@ -194,6 +220,7 @@
 
     .contatos {
       display: flex;
+      justify-content: center;
       gap: 40px;
       margin: auto;
       margin-top: 30px;
@@ -220,6 +247,7 @@
     .social {
       margin-top: 50px;
       display: flex;
+      justify-content: center;
       gap: 80px;
     }
 
@@ -232,6 +260,13 @@
       scale: 1.1;
     }
 
+    .before-footer {
+      background-color: #473816;
+      color: white;
+      margin-top: 20px;
+      padding: 20px 0px 60px 0px;
+    }
+
     hr {
       width: 100px;
       border-bottom: 2px solid black;
@@ -242,22 +277,27 @@
     /* ======= FOOTER ======= */
 
     footer {
+      background-color: #473816;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      color: white;
 
-      margin-top: 60px;
-      margin-bottom: 30px;
+      padding-bottom: 10px;
+    }
+
+    .superior {
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-top: 1px solid white;
+      width: 1000px;
     }
 
     footer span {
-      color: black;
-      transition: 0.4s;
-    }
-
-    footer span:hover {
       color: white;
+      transition: 0.4s;
     }
 
     /* ======= ANIMATIONS ======= */
@@ -267,6 +307,41 @@
 
     .btn input:hover {
       background-color: #be1e2d;
+    }
+
+    #sobre h3:hover {
+      color: #e7931a;
+    }
+
+    footer span:hover {
+      filter: brightness(50%);
+    }
+
+    /* ======= FadeIn ======= */
+
+    .fadeIn {
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+      -webkit-animation-duration: 1s;
+      animation-duration: 3s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
+    @-webkit-keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
 
     /* Card Fliper */
@@ -337,7 +412,7 @@
     }
   </style>
   <body>
-    <header>
+    <header id="header">
       <div class="logo">
         <img src="./Assets/logo2.png" alt="" />
         <h1>
@@ -347,13 +422,16 @@
       </div>
       <div class="menu">
         <div class="menu2">
-          <a href="">INÍCIO</a>
+          <a href="#header">INÍCIO</a>
           <a href="#sobre">SOBRE NÓS</a>
           <a href="#produtos">PRODUTOS</a>
           <a href="#contato">CONTATO</a>
         </div>
       </div>
-      <div class="banner"><img src="./Assets/banner.jpg" alt="" /></div>
+      <div class="banner">
+        <p class="fadeIn">Nós mantemos as tradições da panificação...</p>
+        <img src="./Assets/banner.jpg" alt="" />
+      </div>
       <div class="information">
         <marquee scrollamount="5" behavior="scroll" direction="left">
           Segunda à Sábado de 7h as 20h. <br />
@@ -406,7 +484,7 @@
                     <img src="./Assets/Produtos/cacetinho.png" />
                     <div class="card-content">
                       <h3>Pão francês</h3>
-                      <h1>R$ 2,50/Kg</h1>
+                      <h1>R$ 0,00/Kg</h1>
                     </div>
                   </div>
                 </div>
@@ -423,7 +501,7 @@
                     <img src="./Assets/Produtos/italiano.png" />
                     <div class="card-content">
                       <h3>Pão Italiano</h3>
-                      <h1>R$ 2,50/Kg</h1>
+                      <h1>R$ 0,00/Unid.</h1>
                     </div>
                   </div>
                 </div>
@@ -439,7 +517,7 @@
                     <img src="./Assets/Produtos/australiano.jpg" />
                     <div class="card-content">
                       <h3>Pão australiano</h3>
-                      <h1>R$ 2,50/Kg</h1>
+                      <h1>R$ 0,00/Kg</h1>
                     </div>
                   </div>
                 </div>
@@ -457,7 +535,7 @@
                     <img src="./Assets/Produtos/baguete.png" />
                     <div class="card-content">
                       <h3>Baguete</h3>
-                      <h1>R$ 2,50/Kg</h1>
+                      <h1>R$ 0,00/Unid.</h1>
                     </div>
                   </div>
                 </div>
@@ -474,7 +552,7 @@
                     <img src="./Assets/Produtos/brioche.jpg" />
                     <div class="card-content">
                       <h3>Brioche</h3>
-                      <h1>R$ 2,50/Kg</h1>
+                      <h1>R$ 0,00/Unid</h1>
                     </div>
                   </div>
                 </div>
@@ -490,7 +568,7 @@
                     <img src="./Assets/Produtos/focaccia.png" />
                     <div class="card-content">
                       <h3>Focaccia</h3>
-                      <h1>R$ 2,50/Kg</h1>
+                      <h1>R$ 0,00/Unid</h1>
                     </div>
                   </div>
                 </div>
@@ -508,7 +586,7 @@
                     <img src="./Assets/Produtos/croissant.jpg" />
                     <div class="card-content">
                       <h3>Croissant</h3>
-                      <h1>R$ 2,50/Kg</h1>
+                      <h1>R$ 0,00/Unid.</h1>
                     </div>
                   </div>
                 </div>
@@ -525,7 +603,7 @@
                     <img src="./Assets/Produtos/Pao-de-queijo.jpg" />
                     <div class="card-content">
                       <h3>Pão de queijo</h3>
-                      <h1>R$ 2,50/Kg</h1>
+                      <h1>R$ 0,00/Kg</h1>
                     </div>
                   </div>
                 </div>
@@ -541,7 +619,7 @@
                     <img src="./Assets/Produtos/sonho.jpg" />
                     <div class="card-content">
                       <h3>Sonho</h3>
-                      <h1>R$ 2,50/Kg</h1>
+                      <h1>R$ 0,00/Unid.</h1>
                     </div>
                   </div>
                 </div>
@@ -578,65 +656,63 @@
               <input type="button" value="Enviar mensagem" />
             </div>
           </form>
-          <div class="contatos">
-            <div>
-              <div class="icon-title">
-                <img
-                  width="30px"
-                  src="./Assets/Icons/location.png"
-                  alt="ícone local"
-                />
-                <h3>Endereço</h3>
-              </div>
-              <p>Rua João 01, 101 - Rio de Janeiro RJ</p>
-            </div>
-            <div>
-              <div class="icon-title">
-                <img
-                  width="30px"
-                  src="./Assets/Icons/phone-call.png"
-                  alt="ícone telefones"
-                />
-                <h3>Telefones</h3>
-              </div>
-              <p>
-                Telefone: 21 4002-8922 <br />
-                Celular: 21 96666-9999
-              </p>
-            </div>
-            <div>
-              <div class="icon-title">
-                <img
-                  width="30px"
-                  src="./Assets/Icons/mail.png"
-                  alt="ícone email"
-                />
-                <h3>E-mail</h3>
-              </div>
-              <p>emailpadaria@mail.com</p>
-            </div>
-          </div>
-          <div class="social">
-            <a href=""><img src="./Assets/Icons/whatsapp.png" alt="" /></a>
-            <a href=""><img src="./Assets/Icons/facebook.png" alt="" /></a>
-            <a href=""><img src="./Assets/Icons/instagram.png" alt="" /></a>
-          </div>
         </div>
       </section>
     </main>
+    <section class="before-footer">
+      <div class="contatos">
+        <div>
+          <div class="icon-title">
+            <img
+              width="30px"
+              src="./Assets/Icons/location.png"
+              alt="ícone local"
+            />
+            <h3>Endereço</h3>
+          </div>
+          <p>Rua João 01, 101 - Rio de Janeiro RJ</p>
+        </div>
+        <div>
+          <div class="icon-title">
+            <img
+              width="30px"
+              src="./Assets/Icons/phone-call.png"
+              alt="ícone telefones"
+            />
+            <h3>Telefones</h3>
+          </div>
+          <p>
+            Telefone: 21 4002-8922 <br />
+            Celular: 21 96666-9999
+          </p>
+        </div>
+        <div>
+          <div class="icon-title">
+            <img width="30px" src="./Assets/Icons/mail.png" alt="ícone email" />
+            <h3>E-mail</h3>
+          </div>
+          <p>emailpadaria@mail.com</p>
+        </div>
+      </div>
+      <div class="social">
+        <a href=""><img src="./Assets/Icons/whatsapp1.png" alt="" /></a>
+        <a href=""><img src="./Assets/Icons/facebook1.png" alt="" /></a>
+        <a href=""><img src="./Assets/Icons/instagram1.png" alt="" /></a>
+      </div>
+    </section>
     <footer>
-      <p>
-        Desenvolvido por <a href=""><span>Ricardo Gonçalves</span></a> no Curso
-        de Programador Front-End com o
-        <a href=""><span>Prof. Anthony Freitas</span></a
-        >.
-      </p>
-      <p>Todos os direitos reservados - Senai Maracanã - 2023©</p>
+      <div class="superior">
+        <p>
+          Desenvolvido por <a href=""><span>Ricardo Gonçalves</span></a> no
+          Curso de Programador Front-End com o
+          <a href=""><span>Prof. Anthony Freitas</span></a
+          >.
+        </p>
+        <p>Todos os direitos reservados - Senai Maracanã - 2023©</p>
+      </div>
     </footer>
   </body>
 </html>
 <!--  
   -Colocar uma mensagem em fade-in na frente do banner
-  -Mexer nas fontes, tamanhos e cores
-  -Mudar preço dos produtos
 -->

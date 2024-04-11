@@ -1,2 +1,2 @@
-# Projeto-1-SENAI
+# Catalone's Bakery
 Primeiro projeto para ser postado do SENAI

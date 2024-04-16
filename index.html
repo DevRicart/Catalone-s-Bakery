@@ -15,6 +15,8 @@
   </head>
   <body>
     <header id="header">
+      <!-- ==================== Nav ==================== -->
+    
       <div class="logo">
         <img src="./Assets/logo2.png" alt="" />
         <h1>
@@ -22,17 +24,28 @@
           Bakery
         </h1>
       </div>
-      <div class="menu">
-        <div class="menu2">
-          <a href="#header">INÍCIO</a>
-          <a href="#sobre">SOBRE NÓS</a>
-          <a href="#produtos">PRODUTOS</a>
-          <a href="#contato">CONTATO</a>
-        </div>
-      </div>
+      <nav class="nav">
+
+        <img src="./Assets/logo2.png" alt="">
+        <ul class="menu" id="menu" role="menu">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#comprar">Sobre nós</a></li>
+          <li><a href="#encarte">Produtos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <button
+        class="btn-menu"
+        aria-label="Abrir Menu"
+        aria-haspopup="true"
+        aria-controls="menu"
+        aria-expanded="false"
+      >
+        <span class="hamburger"></span>
+      </button>
+      </nav>
       <div class="banner">
         <p class="fadeIn">Nós mantemos as tradições da panificação...</p>
-        <img src="./Assets/banner.jpg" alt="" />
+        <img src="./Assets/banner-cell3.jpg" alt="" />
       </div>
       <div class="information">
         <marquee scrollamount="5" behavior="scroll" direction="left">
@@ -42,6 +55,7 @@
         >
       </div>
     </header>
+
     <main>
       <section id="sobre">
         <h2>Sobre nós</h2>
@@ -74,13 +88,18 @@
             <h2>Nossos produtos</h2>
             <hr />
           </div>
+          <div class="produtos">
 
+          
           <div class="cards">
-            <div class="produtos">
+            <div class="produto">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <img src="./Assets/Produtos/cacetinho.png" />
+                    <div class="product-description">
+                      <h3>Pão Francês</h3>
+                    </div>
                   </div>
                   <div class="flip-card-back">
                     <img src="./Assets/Produtos/cacetinho.png" />
@@ -93,11 +112,15 @@
               </div>
             </div>
 
-            <div class="produtos">
+            <div class="produto">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <img src="./Assets/Produtos/italiano.png" />
+                    <div class="product-description">
+                      <h3>Pão Italiano</h3>
+
+                    </div>
                   </div>
                   <div class="flip-card-back">
                     <img src="./Assets/Produtos/italiano.png" />
@@ -109,11 +132,16 @@
                 </div>
               </div>
             </div>
-            <div class="produtos">
+            
+            <div class="produto">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <img src="./Assets/Produtos/australiano.jpg" />
+                    <div class="product-description">
+                      <h3>Australiano</h3>
+
+                    </div>
                   </div>
                   <div class="flip-card-back">
                     <img src="./Assets/Produtos/australiano.jpg" />
@@ -125,13 +153,18 @@
                 </div>
               </div>
             </div>
+          
           </div>
           <div class="cards">
-            <div class="produtos">
+            <div class="produto">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <img src="./Assets/Produtos/baguete.png" />
+                    <div class="product-description">
+                      <h3>Baguete</h3>
+
+                    </div>
                   </div>
                   <div class="flip-card-back">
                     <img src="./Assets/Produtos/baguete.png" />
@@ -144,11 +177,15 @@
               </div>
             </div>
 
-            <div class="produtos">
+            <div class="produto">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <img src="./Assets/Produtos/brioche.jpg" />
+                    <div class="product-description">
+                      <h3>Brioche</h3>
+
+                    </div>
                   </div>
                   <div class="flip-card-back">
                     <img src="./Assets/Produtos/brioche.jpg" />
@@ -160,11 +197,15 @@
                 </div>
               </div>
             </div>
-            <div class="produtos">
+            <div class="produto">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <img src="./Assets/Produtos/focaccia.png" />
+                    <div class="product-description">
+                      <h3>Focaccia</h3>
+
+                    </div>
                   </div>
                   <div class="flip-card-back">
                     <img src="./Assets/Produtos/focaccia.png" />
@@ -178,11 +219,15 @@
             </div>
           </div>
           <div class="cards">
-            <div class="produtos">
+            <div class="produto">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <img src="./Assets/Produtos/croissant.jpg" />
+                    <div class="product-description">
+                      <h3>Croissant</h3>
+
+                    </div>
                   </div>
                   <div class="flip-card-back">
                     <img src="./Assets/Produtos/croissant.jpg" />
@@ -195,11 +240,15 @@
               </div>
             </div>
 
-            <div class="produtos">
+            <div class="produto">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <img src="./Assets/Produtos/Pao-de-queijo.jpg" />
+                    <div class="product-description">
+                      <h3>Pão de queijo</h3>
+
+                    </div>
                   </div>
                   <div class="flip-card-back">
                     <img src="./Assets/Produtos/Pao-de-queijo.jpg" />
@@ -211,11 +260,15 @@
                 </div>
               </div>
             </div>
-            <div class="produtos">
+            <div class="produto">
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <img src="./Assets/Produtos/sonho.jpg" />
+                    <div class="product-description">
+                      <h3>Sonho</h3>
+
+                    </div>
                   </div>
                   <div class="flip-card-back">
                     <img src="./Assets/Produtos/sonho.jpg" />
@@ -228,6 +281,7 @@
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
       <section id="contato">
@@ -321,7 +375,7 @@
     </main>
     <section class="before-footer">
       <div class="contatos">
-        <div>
+        <div class="extra-contacts">
           <div class="icon-title">
             <img
               width="30px"
@@ -332,7 +386,7 @@
           </div>
           <p>Rua João 01, 101 - Rio de Janeiro RJ</p>
         </div>
-        <div>
+        <div class="extra-contacts">
           <div class="icon-title">
             <img
               width="30px"
@@ -346,7 +400,7 @@
             Celular: 21 96666-9999
           </p>
         </div>
-        <div>
+        <div class="extra-contacts">
           <div class="icon-title">
             <img width="30px" src="./Assets/Icons/mail.png" alt="ícone email" />
             <h3>E-mail</h3>
@@ -363,15 +417,13 @@
     <footer>
       <div class="superior">
         <p>
-          Desenvolvido por <a href=""><span>Ricardo Gonçalves</span></a> no
-          Curso de Programador Front-End com o
-          <a href=""><span>Prof. Anthony Freitas</span></a
-          >.
+          Desenvolvido por <a href=""><span>Ricardo Gonçalves</span></a>.
         </p>
-        <p>Todos os direitos reservados - Senai Maracanã - 2023©</p>
+        <p>Todos os direitos reservados ©</p>
       </div>
     </footer>
   </body>
+  <script src="./script.js"></script>
 </html>
 <!--  
   -Colocar uma mensagem em fade-in na frente do banner

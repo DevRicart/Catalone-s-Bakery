@@ -23,8 +23,12 @@
       background-color: #eadbc2;
     }
 
-
     .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo h5 {
       display: none;
     }
 
@@ -160,6 +164,10 @@
       z-index: 98;
     }
 
+    .banner-img-pc {
+      display: none;
+    }
+
     .banner img {
       width: 100vw;
     }
@@ -180,6 +188,7 @@
       padding-top: 20px;
       padding-bottom: 20px;
     }
+
     #sobre h2,
     #produtos h2,
     #contato h2 {
@@ -237,12 +246,12 @@
     }
 
     .produto {
-
       border-radius: 10px;
-      background-color: white;
+      background-color: #eadbc2;
       -webkit-box-shadow: 7px 10px 25px -6px rgba(0,0,0,0.75);
       -moz-box-shadow: 7px 10px 25px -6px rgba(0,0,0,0.75);
       box-shadow: 7px 10px 25px -6px rgba(0,0,0,0.75);
+      transition: 0.4s;
     }
 
     .flip-card-back {
@@ -300,15 +309,18 @@
     }
 
     .nome {
+      font-size: 12px;
       max-width: 90vw;
     }
 
     .email {
+      font-size: 12px;
       margin-top: 5px;
       max-width: 90vw;
     }
 
     .telefone {
+      font-size: 12px;
       max-width: 90vw;
     }
 
@@ -319,7 +331,7 @@
       height: 200px;
       border: none;
       border-radius: 5px;
-      font-size: 16px;
+      font-size: 12px;
       padding: 5px 15px;
       outline: none;
     }
@@ -341,13 +353,11 @@
       margin-top: 10px;
     }
 
-    contatos {
+    .contatos {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 40px;
-      margin: auto;
-      margin-top: 30px;
     }
 
     .extra-contacts {
@@ -379,9 +389,6 @@
       transition: 0.4s;
     }
 
-    .social img:hover {
-      scale: 1.1;
-    }
 
     .before-footer {
       background-color: #473816;
@@ -402,12 +409,14 @@
       flex-direction: column;
       align-items: center;
       color: white;
+      text-align: center;
 
-      padding-bottom: 10px;
+      padding-bottom: 20px;
     }
 
     .superior {
       padding-top: 10px;
+      padding-inline: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -423,191 +432,365 @@
       transition: 0.4s;
     }
 
+    /* ==== RESPONSIVE ====== */
+
+    @media (min-width: 375px) {
+      .nav {
+        height: 8vh;
+      }
+
+      .menu {
+        top: 8vh;
+      }
+
+      .banner {
+        padding-top: 8vh;
+      }
+
+      .banner p {
+        margin-top: 10px;
+        margin-left: 145px;
+      }
+
+      .information {
+        font-size: 16px;
+      }
+
+      /* ===== Sobre ===== */
+
+      #sobre {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      #sobre img {
+        width: 350px;
+        height: 250px;
+        margin-bottom: 20px;
+      }
+
+      .sobre-information {
+        text-align: justify;
+      }
+
+      #sobre h3 {
+        margin-bottom: 25px;
+        font-size: 20px;
+        color: #473816;
+        transition: 0.4s;
+      }
+  
+      #sobre p {
+        color: #594b46;
+        font-size: 18px;
+      }
+
+      #sobre h2,
+      #produtos h2,
+      #contato h2 {
+      font-size: 32px;
+      }
+
+      /* ===== produtos ===== */
+
+      #produtos {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .flip-card-front img  {
+        width: 120px;
+        height: 93px;
+        border-bottom: 1px solid black;
+        border-radius: 10px 10px 0px 0px;
+      }
+
+      .product-description h3 {
+        font-size: 16px;
+        padding: 5px;
+      }
+
+      /* ===== produtos ===== */
+
+      #contato {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+  
+      .contato form {
+        width: 90vw;
+      }
+  
+      .dados {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+  
+      .nome {
+        width: 90vw;
+      }
+  
+      .telefone {
+        max-width: 90vw;
+      }
+  
+      textarea {
+        width: 90vw;
+        font-size: 20px;
+      }
+
+      .contatos {
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      .extra-contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
+      }
+  
+      .contatos .icon-title {
+        display: flex;
+        align-items: center;
+      }
+  
+      .contatos .icon-title img {
+        margin-right: 10px;
+        width: 50px;
+      }
+  
+      .icon-title {
+        display: flex;
+      }
+
+      .icon-title h3 {
+        font-size: 24px;
+      }
+
+      .extra-contacts p {
+        font-size: 18px;
+      }
+  
+      .social img {
+        width: 80px;
+      }
+  
+      .before-footer {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+  
+      .superior p {
+        font-size: 12px;
+      }
+
+    }
     
-        /* Card Fliper */
-        /*
-        .flip-card {
-          background-color: transparent;
-          width: 150px;
-          height: 114px;
-          perspective: 1000px;
-        }
-        .flip-card-inner {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          text-align: center;
-          transition: transform 0.6s;
-          transform-style: preserve-3d;
-        }
-        .flip-card:hover .flip-card-inner {
-          transform: rotateY(180deg);
-        }
-        .flip-card-front,
-        .flip-card-back {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-          border-radius: 16px;
-        }
-    
-        .flip-card-front img {
-          width: 150px;
-          height: 114px;
-    
-          border-radius: 10px;
-        }
-    
-        .flip-card-back {
-          background-image: linear-gradient(315deg, #e7931a, #be1e2d);
-          color: #ffffff;
-          transform: rotateY(180deg);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 5px;
-        }
-        .flip-card-back img {
-          width: 90px;
-          height: 58px;
-          margin-top: 1rem;
-    
-          border-radius: 10px;
-        }
-    
-        .card-content {
-          border-radius: 10px;
-          width: fit-content;
-    
-          padding: 5px;
-        }
-    
-        .flip-card-back h3 {
-          margin-bottom: 0.3rem;
-        }
-        .flip-card-back h1 {
-          margin: 0;
-        }
+    @media (min-width: 768px) {
 
-    /* ======= HEADER ====== */
-        /*
-    .logo {
-      display: flex;
-      align-items: center;
+      .nav {
+        display: flex;
+        justify-content: space-between;
+      }
 
-      color: #594b46;
+      .nav ul {
+        margin-right: 25px;
+        display: flex;
+        gap: 0;
+      }
 
-      margin: 20px 0px 10px 10px;
+      .nav li {
+        height: 8vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 10px 0 10px;
+        cursor: pointer;
+        transition: .4s;
+      }
+
+      .nav li a {
+        border-left: 2px solid white;
+        border-radius: 0;
+        padding: 2px 0 2px 10px;
+      }
+
+      .banner p {
+        font-size: 30px;
+        margin-top: 10px;
+        margin-left: 290px;
+      }
+
+      #sobre img {
+        width: 400px;
+        height: 250px;
+      }
+
+      .cards {
+        justify-content: center;
+        gap: 40px;
+      }
+
+      .flip-card-front img  {
+        width: 200px;
+        height: 155px;
+        border-bottom: 1px solid black;
+        border-radius: 10px 10px 0px 0px;
+      }
+
+      .product-description h3 {
+        font-size: 16px;
+      }
+
+      .contato form  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .dados {
+        flex-direction: row;
+      }
+  
+      input {
+        height: 40px;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+        padding: 20px;
+        outline: none;
+      }
+  
+      .nome {
+        width: 500px;
+      }
+  
+      .email {
+        margin-top: 5px;
+        width: 248px;
+      }
+  
+      .telefone {
+        margin-top: 5px;
+        width: 248px;
+      }
+  
+      textarea {
+        margin-top: 5px;
+        resize: none;
+        width: 500px;
+        height: 300px;
+        border: none;
+        border-radius: 5px;
+        font-size: 12px;
+        padding: 5px 15px;
+        outline: none;
+      }
+  
+      .btn {
+        display: flex;
+        justify-content: center;
+      }
+  
+      .btn input {
+        padding: 15px 30px;
+        height: fit-content;
+        border-radius: 10px;
+        cursor: pointer;
+        color: white;
+        background-color: #e7931a;
+        transition: 0.4s;
+        border: none;
+        margin-top: 10px;
+      }
+
+      .social {
+        justify-content: center;
+        gap: 50px;
+      }
+
+      .superior p {
+        font-size: 14px;
+      }
+      
     }
 
-    .logo img {
-      margin-right: 15px;
-      width: 100px;
+    @media (min-width: 1024px) {
+
+      .logo {
+        color: white;
+        gap: 5px;
+      }
+
+      .logo h5 {
+        width: 80px;
+        font-size: 18px;
+        display: block;
+      }
+
+      .banner-img-pc {
+        display: block;
+      }
+
+      .banner-img-cell {
+        display: none;
+      }
+
+      .banner p {
+        font-size: 30px;
+        margin-top: 30px;
+        margin-left: 20px;
+        width: 400px;
+      }
+
+      .sobre {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 20px;
+      }
+
+      #sobre img {
+        width: 450px;
+        height: 350px;
+        margin-bottom: 0;
+      }
+
+      #sobre p {
+        font-size: 17px;
+      }
+
+      .flip-card-front img  {
+        width: 250px;
+        height: 194px;
+        border-bottom: 1px solid black;
+        border-radius: 10px 10px 0px 0px;
+      }
+
     }
 
-    .menu {
-      display: flex;
-      align-items: center;
-      height: 60px;
+    @media (min-width: 1440px) {
+      .banner p {
+        font-size: 44px;
+        margin-top: 10px;
+        margin-left: 20px;
+        width: 800px;
+      }
 
-      background-color: #e7931a;
-    }
+      #sobre div {
+        width: 950px;
+      }
 
-    .menu2 {
-      display: flex;
-      width: fit-content;
-      margin-left: 60px;
-    }
-
-    .menu2 a {
-      display: flex;
-      align-items: center;
-      padding-inline: 30px;
-
-      color: white;
-      height: 60px;
-      font-size: 20px;
-      font-weight: 700;
-
-      transition: 0.4s;
-    }
-
-
-
-
-
-
-    /* ======= MAIN ======= */
-/*
-   
-
-    #contato {
-      display: flex;
-      justify-content: center;
-    }
-
-    .contato {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    input {
-      height: 40px;
-      font-size: 20px;
-      border: none;
-      border-radius: 5px;
-      padding: 20px;
-      outline: none;
-    }
-
-    .nome {
-      width: 500px;
-    }
-
-    .email {
-      margin-top: 5px;
-      width: 248px;
-    }
-
-    .telefone {
-      width: 248px;
-    }
-
-    textarea {
-      margin-top: 5px;
-      resize: none;
-      width: 500px;
-      height: 300px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      padding: 5px 15px;
-      outline: none;
-    }
-
-    .btn {
-      display: flex;
-      justify-content: center;
-    }
-
-    .btn input {
-      padding: 15px 30px;
-      height: fit-content;
-      border-radius: 10px;
-      cursor: pointer;
-      color: white;
-      background-color: #e7931a;
-      transition: 0.4s;
-      border: none;
-      margin-top: 10px;
     }
 
     /* ======= ANIMATIONS ======= */
-    /*
-    .menu2 a:hover {
+
+    .nav li:hover {
       background-color: #be1e2d;
     }
 
@@ -619,12 +802,22 @@
       color: #e7931a;
     }
 
+    .social img:hover {
+      scale: 1.1;
+    }
+
     footer span:hover {
       filter: brightness(50%);
     }
 
+    .produto:hover {
+      scale: 1.1;
+    }
+
+
+
     /* ======= FadeIn ======= */
-    /*
+
     .fadeIn {
       -webkit-animation-name: fadeIn;
       animation-name: fadeIn;

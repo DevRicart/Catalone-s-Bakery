@@ -16,21 +16,16 @@
   <body>
     <header id="header">
       <!-- ==================== Nav ==================== -->
-    
-      <div class="logo">
-        <img src="./Assets/logo2.png" alt="" />
-        <h1>
-          Catalone's <br />
-          Bakery
-        </h1>
-      </div>
       <nav class="nav">
-
-        <img src="./Assets/logo2.png" alt="">
+        <div class="logo">
+          <img src="./Assets/logo2.png" alt="">
+          <h5>Catalone's Bakery</h5>
+        </div>
+        
         <ul class="menu" id="menu" role="menu">
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#comprar">Sobre nós</a></li>
-          <li><a href="#encarte">Produtos</a></li>
+          <li><a href="#header">Início</a></li>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#produtos">Produtos</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
         <button
@@ -45,7 +40,8 @@
       </nav>
       <div class="banner">
         <p class="fadeIn">Nós mantemos as tradições da panificação...</p>
-        <img src="./Assets/banner-cell3.jpg" alt="" />
+        <img class="banner-img-pc" src="./Assets/banner.jpg" alt="">
+        <img class="banner-img-cell" src="./Assets/banner-cell3.jpg" alt="" />
       </div>
       <div class="information">
         <marquee scrollamount="5" behavior="scroll" direction="left">
@@ -62,7 +58,7 @@
         <hr />
         <div class="sobre">
           <img src="./Assets/sobre.jpg" alt="" />
-          <div>
+          <div class="sobre-information">
             <h3>
               Catalone's Bakery se dedica em confeccionar pães feitos a mão
               utilizando a tradicional técnica da família por 70 anos.
@@ -199,7 +195,6 @@
             </div>
             <div class="produto">
               <div class="flip-card">
-                <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <img src="./Assets/Produtos/focaccia.png" />
                     <div class="product-description">
@@ -207,77 +202,39 @@
 
                     </div>
                   </div>
-                  <div class="flip-card-back">
-                    <img src="./Assets/Produtos/focaccia.png" />
-                    <div class="card-content">
-                      <h3>Focaccia</h3>
-                      <h1>R$ 0,00/Unid</h1>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
           <div class="cards">
             <div class="produto">
               <div class="flip-card">
-                <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <img src="./Assets/Produtos/croissant.jpg" />
                     <div class="product-description">
                       <h3>Croissant</h3>
-
                     </div>
                   </div>
-                  <div class="flip-card-back">
-                    <img src="./Assets/Produtos/croissant.jpg" />
-                    <div class="card-content">
-                      <h3>Croissant</h3>
-                      <h1>R$ 0,00/Unid.</h1>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
 
             <div class="produto">
               <div class="flip-card">
-                <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <img src="./Assets/Produtos/Pao-de-queijo.jpg" />
                     <div class="product-description">
                       <h3>Pão de queijo</h3>
-
                     </div>
                   </div>
-                  <div class="flip-card-back">
-                    <img src="./Assets/Produtos/Pao-de-queijo.jpg" />
-                    <div class="card-content">
-                      <h3>Pão de queijo</h3>
-                      <h1>R$ 0,00/Kg</h1>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="produto">
               <div class="flip-card">
-                <div class="flip-card-inner">
                   <div class="flip-card-front">
                     <img src="./Assets/Produtos/sonho.jpg" />
                     <div class="product-description">
                       <h3>Sonho</h3>
-
                     </div>
                   </div>
-                  <div class="flip-card-back">
-                    <img src="./Assets/Produtos/sonho.jpg" />
-                    <div class="card-content">
-                      <h3>Sonho</h3>
-                      <h1>R$ 0,00/Unid.</h1>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -396,8 +353,8 @@
             <h3>Telefones</h3>
           </div>
           <p>
-            Telefone: 21 4002-8922 <br />
-            Celular: 21 96666-9999
+            Telefone: (21) 4002-8922 <br />
+            Celular: (21) 96666-9999
           </p>
         </div>
         <div class="extra-contacts">
